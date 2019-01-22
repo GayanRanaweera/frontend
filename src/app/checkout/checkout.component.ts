@@ -121,4 +121,18 @@ export class CheckoutComponent implements OnInit {
     console.log(this.reviewCardDetails)
     this.stepper.next()
   }
+
+  isTrue :boolean = true;
+  qrcode = "";
+  clickEvent(){
+    if (this.isTrue == true){
+      this.isTrue = false;
+      this.qrcode = Math.floor((Math.random() * 50000000) + 5000000).toString();
+    }
+    
+  }
+
+  saveQRCode(){
+    
+  }
 }
